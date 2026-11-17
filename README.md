@@ -1,75 +1,34 @@
-# React + TypeScript + Vite
+# Premiers pas avec React et TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dossier de travail de Quentin Fuentes pour découvrir React avec TypeScript et Vite.
 
-Currently, two official plugins are available:
+Cette version contient le squelette de démarrage Vite, sa page de présentation et un compteur interactif. Elle sert de base pour travailler les composants, les événements et l’état local avec `useState`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Installation
 
-## React Compiler
+Installer Node.js et npm, puis lancer depuis la racine :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm ci
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Ouvrir l’adresse affichée dans le terminal.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Commandes disponibles
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Commande | Utilité |
+| --- | --- |
+| `npm run dev` | Serveur de développement |
+| `npm run build` | Vérification TypeScript et compilation |
+| `npm run lint` | Analyse du code avec ESLint |
+| `npm run preview` | Aperçu de la compilation |
 
-```
+## Fichiers principaux
+
+- `src/App.tsx` : composant principal et compteur.
+- `src/main.tsx` : point d’entrée React.
+- `src/App.css` et `src/index.css` : styles.
+- `public/` et `src/assets/` : ressources graphiques.
+
+Projet pédagogique à partir du modèle officiel React/TypeScript/Vite. Les commandes sont celles du dépôt ; elles n’ont pas été réexécutées lors de cette mise à jour du README.
